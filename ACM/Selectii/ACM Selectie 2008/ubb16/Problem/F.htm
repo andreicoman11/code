@@ -1,0 +1,37 @@
+<img width=400 height=300 align=right src=pattyduke.jpg><h2>Problem F:  Cousins</h2>
+Two strings <i>a</i> and <i>b</i> are defined to be <i>first cousins</i> if
+they can be made equal by removing no more than half the characters from each.
+For example "abcdef" and "axcyd" are first cousins because we can remove 3
+of the 6 characters (b,e,f) from the first string and 2 of the 5 characters
+in the second string (x,y) resulting in "acd".  Two strings <i>c</i> and <i>d</i>
+are said to be n+1<i>st cousins</i> if there exists a string <i>e</i> that
+is a first cousin of <i>c</i> and is an n<i>th</i> cousin of <i>d</i>.
+<p>
+Given two strings <i>x</i> and <i>y</i>, determine the smallest <i>n&nbsp;&ge;&nbsp;1</i> such
+that <i>x</i> is an n<i>th</i> cousin of <i>y</i>.
+<p>
+Input consists of several test cases.  Each test case consists of two lines
+representing <i>x</i> and <i>y</i>.  <i>x</i> and <i>y</i> 
+each consist of at least 1 and at most 100 lower case letters.  
+Two lines containing 0 follow the last test case.
+For each test case, output a line containing <i>n</i> or 
+<b>not related</b> if <i>x</i> and <i>y</i> are not n<i>th</i> cousins for any <i>n</i>.
+<h3>Sample Input</h3>
+<pre>
+a
+b
+abb
+baa
+abcdef
+axcyd
+0
+0
+</pre>
+<h3>Output for Sample Input</h3>
+<pre>
+2
+2
+1
+</pre>
+<hr><i>Gordon V. Cormack</i>
+

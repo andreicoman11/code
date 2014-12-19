@@ -1,0 +1,93 @@
+<html>
+<head><title>B. Requirements </title></head>
+<body>
+<div align="justify">
+
+<h2>B. Requirements </h2>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td align="justify">
+
+Auditors are few, but papers to push around are many.
+For low level bulk processing, auditors employ secretaries.
+These secretaries are not very clever (this is why they're not auditors yet),
+but if a simple task is explained well, they can do it precisely and without asking needless questions
+(the famous motto for auditor's secretaries is "understanding is not required - only obedience").
+<p>
+One of the important tasks in such audits is to set up procedure <i>manuals</i>.
+Such a <I>manual</I> contains (among other things) a list of requirements. Once a process
+doesn't meet a requirement, the difference must be documented clearly.
+
+<td> &nbsp;&nbsp; <td align="right">
+<img alt="piles of paper" src="piles-of-paper.png">
+<br><font size="-3">http://www.clker.com/clipart-piles-of-paper.html</font>
+</table>
+<p>
+To make sure there are enough <I>manuals</I> available for describing all processes
+of a company, the custom is that auditors dictate all <I>manuals</I>
+to secretaries after the audit ends. The secretaries
+then merge all <I>manuals</I> with all other <I>manuals</I>. All possible combinations
+are kept, to be on the safe side; but since this merge produces
+new <I>manuals</I> in the system, they have to restart merging again, producing
+even more combinations. This goes on and on until the end of the working day.
+(Precisely until the end: since the labor union of secretaries is strong,
+they don't have to do any overtime.)
+<p>
+A merge of two <I>manuals</I>
+<I>A</I> and <I>B</I> will result in a new <I>manual</I> <I>C</I>, and is produced
+in three steps:
+<UL>
+	<LI> take an empty sheet and label it as <I>manual</I> <I>C</I>
+	<LI> copy all requirements of <I>A</I> to <I>C</I>
+	<LI> append all requirements that are present in <I>B</I> but are not present in <I>A</I> to the end of <I>C</I>.
+</UL>
+<p>
+Secretaries are not just hard-working but are also very pedantic.
+For the two <i>manuals</i> mentioned above, they not only merge <i>A</i> and <i>B</i>
+into <i>C</i>, but also <i>B</i> and <i>A</i> into <i>D</i>.
+<p>
+Looking at all this, you realize what they did not: each requirement is just a
+1-bit property of a <I>manual</I> (whether the manual has it or not), since the order of
+requirements does not really matter. Sooner or later, there are going to be <I>ultimate
+manuals</I> that will contain all requirements ever invented by the auditors.
+Since you know you will need to prepare for the <I>ultimate manuals</I>, the only
+question remains: how many of those will exist? If only a few, you may
+sneak in and shred them before anyone notices.
+<p>
+
+<H3> Input </H3>
+After the end of the audit, there are <I>N</I> different requirements the auditors came
+up with, that occur in the first batch of manuals. The secretaries do the full
+merge on this
+batch (merging each with each other, collecting the new manuals in a
+separate bin not to be mixed into the current merge efforts).
+Having finished the merge, they take all the old and new manuals together,
+and start over again, merging everything with everything else.
+The secretaries have time for doing <i>T</i> full iterations until the end of the day
+(they don't do partial iterations, to avoid confusion).
+<p>
+After <I>N</I> and <I>T</i>, the input file contains 2<sup>N</sup> integers.
+Integer no. <I>i</I> (numbering starts from 0) is the count of how many
+copies of manual <I>i</I> exist (copies are handled like separate manuals when merging,
+but have the same set of requirements in them). Manual no. <I>i</I> lists
+only those requirements where the binary digit of <I>i</I> is 1
+(i.e. manual 0 contains no requirements, manual 1 contains only requirement #1,
+manual 2 contains only requirement #2 while manual 3 contains both requirements #1 and #2).
+
+<H3> Output </H3>
+A single integer, the number of <I>ultimate manuals</I> that will exist by the end of the day
+modulo 1000000007.
+
+<H3>Example input</H3>
+<PRE>
+2 123
+87 65 43 21
+</PRE>
+
+<H3>Example output</H3>
+<PRE>
+991654691
+</PRE>
+
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<img align=right src=gun.gif height=230 width=400><h2>Problem E:  Texas Trip</h2>
+
+After a day trip with his friend Dick, Harry noticed a strange
+pattern of tiny holes in the door of his SUV.  The local American
+Tire store sells fiberglass patching material only in square sheets.
+What is the smallest patch that Harry needs to fix his door?
+<p>
+Assume that the holes are points on the integer lattice in the plane.  Your job is
+to find the area of the smallest square that will cover all
+the holes.
+
+<h3>Input</h3>
+
+The first line of input contains a single integer T expressed in decimal 
+with no leading zeroes, denoting the number of test cases to follow.  The 
+subsequent lines of input describe the test cases.
+<p>
+Each test case begins with a single line, containing a single integer n 
+expressed in decimal with no leading zeroes, the number of points to 
+follow; each of the following n lines contains two integers x and y, both 
+expressed in decimal with no leading zeroes, giving the coordinates of one 
+of your points.
+<p>
+You are guaranteed that T <= 30 and that no data set contains more than 30 
+points.  All points in each data set will be no more than 500 units away 
+from (0,0).
+
+
+<h3>Output</h3>
+
+Print, on a single line with two decimal places of precision, the area of 
+the smallest square containing all of your points.  An answer will be 
+accepted if it lies within 0.1 of the correct answer.
+
+
+<h3>Sample Input</h3>
+<pre>
+2
+4
+-1 -1
+1 -1
+1 1
+-1 1
+4
+10 1
+10 -1
+-10 1
+-10 -1
+</pre>
+
+<h3>Sample Output</h3>
+<pre>
+4.00
+242.00
+</pre>
+<hr>
+<i>Tor Myklebust and Gordon V. Cormack</i>

@@ -1,0 +1,6 @@
+A - ModeProbability TCO05 Semi 3
+B - FactoryCounting TCCC06 Round 1B
+C - ProblemsToSolve SRM340
+D - DivisorInc SRM302
+E - CarolsSinging SRM331
+F - RepeatedPatterns SRM333

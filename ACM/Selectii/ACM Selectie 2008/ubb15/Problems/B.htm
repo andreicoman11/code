@@ -1,0 +1,36 @@
+<img align=right src=smeech.jpg><h2>Problem B: Smeech</h2>
+
+Professor Octastichs has invented a new programming language, Smeech.
+
+An expression in Smeech may be a positive or negative integer, or
+may be of the form
+<tt>
+   (<i>p</i> <i>e<sub>1</sub></i> <i>e<sub>2</sub></i>)
+</tt>
+where <i>p</i> is a real number between 0 and 1 (inclusive) and
+<i>e<sub>1</sub></i> and <i>e<sub>2</sub></i> are Smeech expressions.
+The value represented by a Smeech expression is as follows:
+<ul>
+<li>An integer represents itself
+<li>With probability <i>p</i>, <tt>(<i>p</i> <i>e<sub>1</sub></i> <i>e<sub>2</sub></i>)</tt> represents
+<i>x+y</i> where <i>x</i> is the value of <i>e<sub>1</sub></i> and <i>y</i> is the value of <i>e<sub>2</sub></i>;
+otherwise it represents <i>x-y</i>.
+</ul>
+Given a Smeech expression, what is its expected value?
+<p>
+Input consists of several Smeech expressions, one per line, followed by a
+line containing ().  For each expression, output its expected value to
+two decimal places.
+<h3>Sample Input</h3>
+<pre>
+7
+(.5 3 9)
+()
+</pre>
+<h3>Output for Sample Input</h3>
+<pre>
+7.00
+3.00
+</pre> 
+<hr>
+<i>Gordon V. Cormack</i>

@@ -1,0 +1,161 @@
+<html>
+<head><title>E. Stack compressor</title></head>
+<body>
+<div align="justify">
+
+<h2>E. Stack compressor</h2>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td align="justify">
+
+In its wide range of different products, a flagship model carefully designed
+and manufactured by IGG is a clever processor. The unit implements a
+huge flash-based program memory, a large SRAM-based stack, a great
+32-bit ALU and rich I/O facilities, all integrated
+on the same chip. Even though the product itself is one of the best on the market,
+due to a somewhat unfortunate and ill-planned marketing campaign, sales have lagged.
+There is still a large quantity left from the first production batch.
+<p>
+The sales department now suggests that demand could be raised by demonstrating the
+extraordinary capabilities of the device in specific application
+domains, such as text compression.
+
+<td> &nbsp;&nbsp; <td align="right">
+<img width="300" alt="A heap of DIP chips" src="chips_small.jpg">
+<br><font size="-3">The target platform (<b>illustration</b> - the actual product may differ in look while retaining size and pin compatibility)</font>
+</table>
+<p>
+Your task is to show how well the architecture is suited for text compression
+by providing example programs that output a much larger amount of meaningful data
+than the original size of the program.
+<p>
+Write program that outputs exactly the input file of the task - the smaller the
+code is, the better.
+All instructions increases program size by 1 except that PUSH counts as 2.
+<p>
+Numbers are 32-bit signed numbers (-2<sup>31</sup> &le; n < 2<sup>31</sup>).
+Overflows cause error.
+It is an error if there are not enough elements on the stack for an instruction.
+The stack is empty at startup. Limits:
+<UL>
+	<LI> max stack size: 20 million elements
+	<LI> max step count: 300 million instructions executed
+</UL>
+
+<H3> Instruction set </H3>
+Stack description notation:
+<UL>
+	<LI> "..." means original content of the stack
+	<LI> "a|b" means <i>b</i> on top of <i>a</i> (the last is the topmost element on the stack)
+	<LI> "s[N]" the Nth element of the stack
+</UL>
+<table border=1>
+<tr> <th> instruction <th> description <th width=15%> stack before <th width=15%> stack after
+
+<tr> <th> PUSH&nbsp;const <td> Push a constant to the top of the stack.
+     <td> ... <td> ...|const
+
+<tr> <th> OUT  <td> Pop the top element of the stack and write it to
+    the output as an ASCII character. It is an error if <i>a</i> &gt; 127 or <i>a</i> &lt; 0.
+     <td> ...|a <td> ...
+
+<tr> <th> READ  <td> Pop the top element of the stack, <i>a</i>,
+    and push a copy of the <i>a</i>-th element of the stack on top.
+    For <i>a</i> &ge; 0, the stack is indexed from the bottom.
+    For <i>a</i> &lt; 0, the stack is indexed from the top.
+    (for example the element below <i>a</i> can be indexed with -1).
+     <td> ...|a <td> ...|s[a]
+
+<tr> <th> JGZ <td> Jump if Greater than Zero: Pop the top two
+    elements of the stack, <i>a</i> and <i>b</i>, and jump <i>a</i> instructions if <i>b</i> &gt; 0.
+    Jump forward if <i>a</i> &gt; 0, jump backward if <i>a</i> &lt; 0
+    (<i>a</i> = -1 jumps back to the current JGZ instruction).
+    Execution stops if JGZ jumps out of the code in either direction.
+     <td>...|b|a <td> ...
+
+<tr> <th> ADD <td> Pop the top two elements of the stack, and push their sum.
+     <td> ...|b|a <td> ...|a+b
+
+<tr> <th> MUL  <td> Pop the top two elements of the stack, and push their product.
+     <td>...|b|a <td>...|a*b
+
+<tr> <th> DIV  <td> Pop the top two elements of the stack, and push their quotient
+    and remainder (<i>q</i>=<i>b</i>/<i>a</i>, <i>r</i>=<i>b</i>%<i>a</i> like in C99).
+     <td> ...|b|a <td> ...|q|r
+</table>
+
+<h3>Input</h3>
+
+Plain text 7-bit ASCII, written in English. Expect some control characters
+(e.g. form feed).
+
+<h3>Output</h3>
+
+The program in plain text: a list of instructions, each in a separate line,
+case-sensitive.
+
+<h3>Scoring</h3>
+
+Scores for this problem are scaled against fixed constants (not the solutions of other teams),
+otherwise it works like normal scaled problems:
+multiple solutions can be submitted but only the last one counts.
+<p>
+
+The real score of a size S program is
+<pre>
+SCORE = 20 + 80*(A - S)/(A - B)
+</pre>
+where A, B parameters are given in the table below.
+SCORE is rounded to the nearest integer and then truncated to [0,100].
+
+<table align=center border=1>
+<tr><th>input <td>1.in                <td>2.in                <td>3.in                <td>4.in                <td>5.in                <td>6.in                 <td>7.in                 <td>8.in                 <td>9.in                 <td>10.in
+<tr><th>A     <td align="right">5500  <td align="right">5280  <td align="right">9080  <td align="right">17900 <td align="right">20000 <td align="right">25500  <td align="right">40000  <td align="right">41000  <td align="right">58000  <td align="right">65000
+<tr><th>B     <td align="right">3500  <td align="right">3600  <td align="right">6000  <td align="right">10000 <td align="right">10000 <td align="right">15000  <td align="right">25000  <td align="right">27000  <td align="right">34000  <td align="right">32000
+</table>
+
+<h3>Example input</h3>
+<pre>
+Hello World!
+</pre>
+
+<h3>Example output</h3>
+The size of this program is 50 and it prints the example input including the terminating newline.
+<pre>
+PUSH 72
+OUT
+PUSH 101
+OUT
+PUSH 108
+PUSH -2
+PUSH -1
+MUL
+PUSH -2
+READ
+OUT
+PUSH -1
+ADD
+PUSH -1
+READ
+PUSH -9
+JGZ
+PUSH 6700
+PUSH 21714
+PUSH 22287
+PUSH 6511
+PUSH 200
+DIV
+OUT
+PUSH -1
+READ
+OUT
+PUSH -8
+JGZ
+PUSH 15
+DIV
+ADD
+OUT
+</pre>
+
+</div>
+</body>
+</html>

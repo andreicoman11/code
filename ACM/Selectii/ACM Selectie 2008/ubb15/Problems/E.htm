@@ -1,0 +1,31 @@
+<img src=fermat.jpg align=right height=300 width=400</img><h2>Problem E: Pseudoprime numbers</h2>
+Fermat's theorem states that for any prime number <i>p</i> and for any integer <i>a > 1</i>, <i>a<sup>p</sup> == a (mod p)</i>.
+That is, if we raise <i>a</i> to the <i>p</i>th power and divide by <i>p</i>, the remainder is <i>a</i>.  Some (but not very many) non-prime
+values of <i>p</i>, known as <i>base-a pseudoprimes</i>, have this property for some <i>a</i>.  (And some, known as
+Carmichael Numbers, are base-a pseudoprimes for all <i>a</i>.)
+<p>
+Given <i>2 &lt; p &le; 1,000,000,000</i> and <i>1 &lt; a &lt; p</i>, determine whether or not <i>p</i> is a <i>base-a pseudoprime</i>.
+<p>Input contains several test cases followed by a line containing "0 0".  Each test case consists of a line containing <i>p</i>
+and <i>a</i>.  For each test case, output "yes" if p is a base-a pseudoprime; otherwise output "no".
+
+<h3>Sample Input</h3>
+<pre>
+3 2
+10 3
+341 2
+341 3
+1105 2
+1105 3
+0 0
+</pre>
+<h3>Output for Sample Input</h3>
+<pre>
+no
+no
+yes
+no
+yes
+yes
+</pre>
+<hr>
+<i>Gordon V. Cormack</i>

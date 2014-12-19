@@ -1,0 +1,76 @@
+<html><head><title>Problem H: Flipping colors</title></head><body><h2>Problem H: Flipping colors</h2>
+
+<img src="H_files/recpaint.jpg" align="right" hspace="20" vspace="20">
+
+A rectangle with sides parallel to the x-y axes and its left-lower corner
+at (0,&nbsp;0) is being painted.  The rectangle may be thought of
+as a flat-screen display
+with almost infinite resolution; initially the entire rectangle is
+black.  Two numbers are given 0 &lt; <b>h</b>, <b>v</b> &lt; 1 and then
+<ul>
+<li> A vertical
+line is drawn dividing the horizontal sides of the rectangle in
+proportion
+<b>h</b>:1-<b>h</b> from the left.  
+</li><li> A horizontal line is drawn
+dividing the vertical sides of the rectangles in proportion
+<b>v</b>:1-<b>v</b> from the bottom up.  
+</li><li>These two lines divide the
+rectangle into four smaller rectangles.  
+</li><li>The upper left and the
+lower right sub-rectangles remain intact.  
+</li><li>The color
+of the other two rectangles is flipped (from black to white or from
+white to black) and now each of them is subject to the operation
+just performed on the bigger rectangle.  
+</li><li> This process continues (in principle) forever.
+</li></ul>
+
+Given a point in the original rectangle but not on the boundary of any
+rectangle that turns up in the process of painting, determine the color
+of the point.
+<p>
+Input contains multiple cases.  The first line of each case 
+contains 4 numbers, the length of the rectangle <b>H</b>, the height of the
+rectangle <b>V</b> and then the numbers <b>h</b> and <b>v</b>.  The next
+line contains one integer number <b>n</b>, the number of points to consider.
+The following <b>n</b> lines contain two numbers each, the <b>x</b> and
+the <b>y</b> coordinate of a point.
+</p><p>
+Organize your output as shown in the sample.  For each point from input
+print the color of the point.
+
+</p><h3>Sample input</h3>
+<pre>81 32 0.333333333333 0.5
+6
+16 30
+16 25
+16 12.0001
+16 11.9999
+16 7.987654321
+16 7.0123456789
+10 10 0.123456789 0.987654321
+2
+0.432 0.9876
+9.432 0.9876
+0 0 0 0
+</pre>
+
+
+<h3>Output for sample input</h3>
+<pre>Case 1:
+black
+black
+white
+black
+white
+white
+Case 2:
+white
+black
+</pre>
+
+<hr>
+
+<em>Piotr Rudnicki</em>
+</body></html>

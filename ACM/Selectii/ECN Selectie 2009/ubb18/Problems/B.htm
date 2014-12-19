@@ -1,0 +1,74 @@
+
+<!-- saved from url=(0048)http://plg1.cs.uwaterloo.ca/~acm00/090208/B.html -->
+<HTML><BODY><H2>Problem B: Ocean Currents</H2>
+    <IMG align="right" src="./B_files/B.jpg">
+
+For a boat on a large body of water, strong currents can be dangerous,
+but with careful planning, they can be harnessed to help the boat
+reach its destination. Your job is to help in that planning.
+<P>
+At each location, the current flows in some direction. The captain
+can choose to either go with the flow of the current, using no energy,
+or to move one square in any other direction, at the cost of one energy unit.
+The boat always moves in one of the following eight directions:
+north, south, east, west, northeast, northwest, southeast, southwest.
+The boat cannot leave the boundary of the lake.
+You are to help him devise a strategy to reach the destination with
+the minimum energy consumption.
+
+</P><H3>Input Specification</H3>
+
+The lake is represented as a rectangular grid. The first line
+of input contains two integers <I>r</I> and <I>c</I>, the
+number of rows and columns in the grid. The grid has no more than
+1000 rows and no more than 1000 columns. Each of the following
+<I>r</I> lines contains exactly <I>c</I> characters,
+each a digit from 0 to 7 inclusive. The character 0 means the
+current flows north (i.e. up in the grid, in the direction of decreasing
+row number), 1 means it flows
+northeast, 2 means east (i.e. in the direction of increasing column number), 3 means southeast, and so on in a clockwise
+manner:
+<PRE>7 0 1
+ \|/
+6-*-2
+ /|\
+5 4 3
+</PRE>
+
+The line after the grid contains a single integer <I>n</I>,
+the number of trips to be made, which is at most 50. Each of the following
+<I>n</I> lines describes a trip using four integers
+<I>rs</I>, <I>cs</I>, <I>rd</I>, <I>cd</I>, giving
+the row and column of the starting point and the destination
+of the trip. Rows and columns are numbered starting with 1.
+
+<H3>Sample Input</H3>
+
+<PRE>5 5
+04125
+03355
+64734
+72377
+02062
+3
+4 2 4 2
+4 5 1 4
+5 3 3 4
+</PRE>
+
+<H3>Output Specification</H3>
+
+For each trip, output a line containing a single integer,
+the minimum number of energy units needed to get from the
+starting point to the destination.
+
+<H3>Output for Sample Input</H3>
+
+<PRE>0
+2
+1
+</PRE>
+<HR>
+<I>Ond&#345;ej Lhot&aacute;k, Richard Peng</I>
+
+</BODY></HTML>

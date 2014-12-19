@@ -1,0 +1,54 @@
+
+<!-- saved from url=(0048)http://plg1.cs.uwaterloo.ca/~acm00/090208/A.html -->
+<HTML><BODY><H2>Problem A: Unique Snowflakes</H2>
+    <IMG align="right" src="./A_files/A.jpg">
+
+Emily the entrepreneur has a cool business idea: packaging and selling
+snowflakes. She has devised a machine that captures snowflakes as they
+fall, and serializes them into a stream of snowflakes that flow, one by
+one, into a package. Once the package is full, it is closed and
+shipped to be sold.
+<P>
+The marketing motto for the company is &quot;bags of uniqueness.&quot;
+To live up to the motto, every snowflake in a package
+must be different from the others. Unfortunately, this is
+easier said than done, because in reality, many of the snowflakes
+flowing through the machine are identical. Emily would like to
+know the size of the largest possible package of unique snowflakes
+that can be created. The machine can start filling the package
+at any time, but once it starts, all snowflakes flowing from
+the machine must go into the package until the package is completed
+and sealed.
+</P><H3>Input Specification</H3>
+The first line of input contains one integer specifying the number of
+test cases to follow. Each test case begins with a line containing
+an integer <I>n</I>, the number of snowflakes processed by the machine.
+The following <I>n</I> lines each contain an integer (in the range
+0 to 10^9, inclusive) uniquely identifying
+a snowflake. Two snowflakes are identified by the same integer if
+and only if they are identical.
+The input will contain no more than one million total snowflakes.
+
+<H3>Sample Input</H3>
+
+<PRE>1
+5
+1
+2
+3
+2
+1
+</PRE>
+
+<H3>Output Specification</H3>
+For each test case output a line containing single integer, the maximum
+number of unique snowflakes that can be in a package.
+
+<H3>Output for Sample Input</H3>
+
+<PRE>3
+</PRE>
+<HR>
+<I>Ond&#345;ej Lhot&aacute;k, Richard Peng</I>
+
+</BODY></HTML>

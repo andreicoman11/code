@@ -1,0 +1,82 @@
+<html><head></head><body><img src="B_files/large.gif" align="right"><h2>Problem B: Go</h2>
+Go is played on a square board with an odd number of
+vertical and horizontal lines.  The usual board
+sizes are 9x9, 13x13 and 19x19.  But we'll assume
+the size in <i>n</i>x<i>n</i> for 3 &#8804; n &#8804; 19.
+<p>
+Black and White alternately play stones on the 
+intersection between two lines.  Black starts.  At
+any time one player may pass - not play a stone -
+but if both players pass the game ends.  We'll
+denote playing a stone by P(x,y) where P is either
+B (for Black) or W (for White) and (1-n)/2 &#8804; x,y &#8804; (n-1)/2
+gives the grid position of the stone to be played.
+The centre intersection of the board has coordinates (0,0).
+</p><p>
+The rules of Go are reasonably straightforward, but the
+nuances of strategy make it an extremely challenging game.
+You are to use the following rules.
+</p><ul>
+<li>Black plays first.
+</li><li>Black and White alternate; at each turn a player may place
+a stone or may pass.  The game ends when Black and White pass
+consecutively.
+</li><li>A stone may be played only on an unoccupied intersection.
+</li><li>If one player P places a stone so that his or her stones
+(along with the edge of the board) completely surround a
+connected area occupied by stones belonging to the other
+player, Q, Q's stones are said to be captured and removed
+from the board.  More precisely, two intersections are
+connected if they are horizontally or vertically
+(but not diagonally) adjacent.  Stones in an area
+are completely surrounded if no stone is
+connected with a vacant intersection.
+</li><li> If P places a stone that causes
+Q's stones to be captured, P's stone is
+not captured.
+</li><li>A connected area surrounded by P's stones which
+contains none of Q's stones is said to be <i>owned</i>
+by P.
+</li><li>The score for player P is the number of
+vacant intersections owned by P in the final board
+configuration plus the number of Q's stones captured by P
+at any time during the game.
+</li></ul>
+The input consists of several test cases.  Each
+test case begins with a line containing <i>n</i>
+- the size of the board - and <i>m</i> - the
+number of stones placed in the game.  <i>m</i> lines
+follow, each giving a placement in the format above.
+Note that <i>m</i> counts only stone placements -
+passes may result in two consecutive placements
+by the same player.
+You may assume that each move is legal. 
+A line
+containing 0 0 follows the last test case.
+<p>
+For each test case, output a line with two
+numbers:  Black's score followed by White's score.
+</p><h3>Sample Input</h3>
+<pre>7 6
+B(-2,-2)
+W(2,2)
+B(-2,-3)
+W(2,3)
+B(-3,-2)
+W(3,2)
+7 6
+B(-2,-3)
+W(-3,-3)
+B(-2,-2)
+W(3,2)
+B(-3,-2)
+W(2,3)
+0 0
+</pre>
+<h3>Output for Sample Input</h3>
+<pre>1 1
+2 1
+</pre>
+<hr>
+<i>Gordon V. Cormack</i>
+</body></html>

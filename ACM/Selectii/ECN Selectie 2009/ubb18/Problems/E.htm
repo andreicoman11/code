@@ -1,0 +1,64 @@
+
+<!-- saved from url=(0048)http://plg1.cs.uwaterloo.ca/~acm00/090208/E.html -->
+<HTML><BODY><H2>Problem E: Scrolling Sign</H2>
+    <IMG align="right" src="./E_files/E.jpg">
+
+Electric scrolling signs are often used for advertising.
+A given sign displays exactly <I>k</I> characters. When the
+sign is switched on, all of the character positions are
+initially empty (showing spaces). In each time interval,
+all of the characters on the sign are shifted to the left
+by one position, and a new character is added at the right-most
+position. The character that was in the left-most position
+moves off the sign.
+<P>
+For certain sequences of words, it is possible to reuse characters
+from one word to form a subsequent word. For example, on a sign
+with three character positions, the sign can display the message
+CAT ATE TED by scrolling in the five characters CATED.
+</P><P>
+The advertiser has a specific message to show using the sign.
+The faster the message is displayed, the more people will be
+able to see the whole message. Therefore, your job is to find
+a way to display all the words of the message by scrolling in
+the smallest number of letters. In between showing the words
+of the message, the sign may display other words that are not
+considered part of the message. However, the words of the message 
+must be shown in the order in which they are given.
+</P><H3>Input Specification</H3>
+
+The first line of input contains a single integer <I>n</I>, the number
+of test cases to follow. Each test case starts with a line
+containing a two integers, <I>k</I>, the number of character positions on
+the sign, and <I>w</I>, the number of words in the message.
+Each of the two integers is between 1 and 100, inclusive.
+The following <I>w</I> lines each contain a word of the message comprising
+exactly <I>k</I> uppercase letters.
+
+<H3>Sample Input</H3>
+
+<PRE>2
+3 2
+CAT
+TED
+3 3
+CAT
+ATE
+TEA
+</PRE>
+
+<H3>Output Specification</H3>
+
+For each test case, output a line containing a single integer, the
+minimum number of letters that must be scrolled into the sign
+so that it displays all the words of the message.
+
+<H3>Output for Sample Input</H3>
+
+<PRE>5
+5
+</PRE>
+<HR>
+<I>Ond&#345;ej Lhot&aacute;k, Richard Peng</I>
+
+</BODY></HTML>

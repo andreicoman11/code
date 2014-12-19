@@ -1,0 +1,68 @@
+<html>
+<head><title>A. Cutting back middle management </title></head>
+<body>
+<div align="justify">
+
+<h2>A. Cutting back middle management </h2>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td align="justify">
+
+This is not the first crisis in the history of IGG. Whenever cost reduction
+was needed in the past, firing employees worked to some degree. This affected
+workers at the bottom of the food chain more often; managers could generally
+evade the threat. Over the decades this caused an unusually large amount of
+middle managers to accumulate. The CEO finally realized there's no other way to
+balance the structure of the company but to make their positions redundant.
+<p>
+A middle manager is somebody who has subordinates (who might also be managers),
+but the CEO is not a middle manager. Everyone can have at most M subordinates.
+If someone is fired, their subordinates are reassigned to their boss.
+Determine at most how many middle managers can be fired, such that the
+"at most M subordinates" rule still holds?
+
+<td> &nbsp;&nbsp; <td align="right">
+<img width="200" alt="target: suit & tie" src="suit.png">
+<br><font size="-3">http://www.wpclipart.com/clothes/suit/suit_lapel.png.html</font>
+</table>
+
+
+<h3>Input</h3>
+First line contains N and M, where N is the number of managers.
+In the following N lines, the <i>I</i>th line contains:
+<UL>
+	<LI> k_1, the number of non-manager subordinates of the <i>I</i>th manager
+	<LI> k_2, the number of manager subordinates of the <i>I</i>th manager
+	<LI> k_2 numbers, that are the numbers of the manager subordinates of the <i>I</i>th manager
+</UL>
+It is guaranteed that the 0th manager is the CEO.
+
+<h3>Output</h3>
+
+An integer: the amount of middle managers that can be fired.
+
+<table border="0" width="100%" cellpadding=0 cellspacing=0>
+<tr>
+<td valign=top><h3>Example input</h3>
+<pre>
+10 4
+0 3 6 2 3
+2 1 9
+2 1 8
+2 1 1
+4 0
+1 0
+0 2 7 4
+4 0
+1 1 5
+1 0
+</pre>
+
+<td valign=top><h3>Example output</h3>
+<pre>
+4
+</pre>
+</table>
+
+</div>
+</body>
+</html>

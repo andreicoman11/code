@@ -1,0 +1,84 @@
+<html>
+<head><title>C. Road roller</title></head>
+<body>
+<div align="justify">
+
+<h2>C. Road roller</h2>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td align="justify">
+One of the factors slowing down operations at the IGG steel mill is
+the uneven concrete surface of the factory yard where incoming raw
+material is received and sorted. Fortunately
+there's still time to use one of the brand new products of the company, the <i>EZRoller</i>
+to get a flat surface. <i>EZRoller</i> looks like a traditional road roller but
+has a number of advanced features:
+
+<UL>
+	<LI> no need to roll forth and back over the same spot: a single roll
+	results in a completely flat surface, at the level specified by the user
+	(<i>EZRoller</i> is heavy)
+	<LI> cutting edge 3000 BHP power plant (<i>EZRoller</i> is fast)
+	<LI> there is a button to start, stop, and turn (<i>EZRoller</i> is very user friendly)
+</UL>
+<td> &nbsp;&nbsp; <td align="right">
+<img width="300" alt="An early predecessor of EZRoller" src="roller_small.jpg">
+<br><font size="-3">http://searcharchives.vancouver.ca/ steam-roller-and-crew-at-corner-of-fleming-and-gibson-roads</font>
+</table>
+<p>
+Unfortunately these features impose a limitation on the path <i>EZRoller</i> can
+follow: it is not possible to turn without stopping, and the turn button
+allows turning only in 45 degree steps. Due to inertia, stopping and starting are very
+time consuming operations, so the operator of <i>EZRoller</i> is asked to avoid
+these whenever possible (it's much easier to rely on <i>EZRoller's</i> extreme
+strength and sturdiness, and "think outside the box", so to speak).
+<p>
+You need to find a short path for <i>EZRoller</i> for leveling all the points
+specified on the surface of the factory yard.
+
+<h3>Input</h3>
+Lines of X Y pairs for each point that needs to be levelled (X and Y are integers).
+
+<h3>Output</h3>
+The task is to define a line of connected segments by their
+endpoints such that it covers all the points given in the input
+and the number of segments is minimal.
+<p>
+The segments can be vertical, horizontal or 45 degree
+diagonals. The endpoints of the segments should be
+given as X Y pairs in order, one per line (X and Y must be integers).
+
+<h3>Score</h3>
+This is a scaled problem and the real score is
+<pre>
+SCORE := round(100 * (1 - sqrt(1 - Kmin/K)))
+</pre>
+where K is the number of segments in the output and Kmin is the best submission so far.
+
+<h3>Example input</h3>
+<pre>
+1 5
+2 2
+3 4
+4 1
+4 4
+5 1
+5 3
+5 5
+</pre>
+
+<h3>Example output</h3>
+<pre>
+4 1
+3 1
+3 5
+1 5
+1 1
+5 5
+5 1
+</pre>
+So (4, 1) is connected to (3, 1), (3, 1) is connected to
+(3, 5) and so on. This gives a path of 6 segments.
+
+</div>
+</body>
+</html>

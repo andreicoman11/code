@@ -1,0 +1,6 @@
+A - Alignment TCO06 Semi 2
+B - Sortness SRM330
+C - InsideOut SRM224
+D - CombinationLock SRM181
+E - DiceGames SRM349
+F - CrazySwitches SRM291

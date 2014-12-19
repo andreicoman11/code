@@ -1,0 +1,62 @@
+<html><head><title>Problem : Eventually periodic sequence</title></head><body><h2>Problem C: Eventually periodic sequence</h2>
+
+<img src="C_files/period.jpg" align="right" hspace="10" vspace="10">
+
+Given is a function <em>f: 0..N --&gt; 0..N</em> for a non-negative
+<em>N</em> and a non-negative integer <em>n</em> &#8804; <em>N</em>.  One
+can construct an infinite sequence <em>F = f<sup>&nbsp;1</sup>(n),
+f<sup>&nbsp;2</sup>(n), ... f<sup>&nbsp;k</sup>(n) ... </em>, where
+<em>f<sup>&nbsp;k</sup>(n)</em> is defined recursively as follows:
+<em>f<sup>&nbsp;1</sup>(n) = f(n)</em> and <em>f<sup>&nbsp;k+1</sup>(n)</em> =
+<em>f(f<sup>&nbsp;k</sup>(n))</em>.
+<p>
+It is easy to see that each such sequence <em>F</em> is eventually
+periodic, that is periodic from some point onwards, e.g 1, 2, 7, 5, 4,
+6, 5, 4, 6, 5, 4, 6 ... .
+Given non-negative integer <em>N &#8804; 11000000 </em>, <em>n &#8804; N</em> and
+<em>f</em>, you are to compute the period of sequence <em>F</em>.
+</p><p>
+Each line of input contains <em>N</em>, <em>n</em> and the a
+description of <em>f</em> in postfix notation, also known as Reverse
+Polish Notation (RPN).  The operands are either unsigned integer
+constants or <em>N</em> or the variable <em>x</em>.  Only binary
+operands are allowed: + (addition), * (multiplication) and % (modulo, i.e. remainder of integer division).
+Operands and operators are separated by whitespace.  The operand %
+occurs exactly once in a function and it is the last (rightmost, or
+topmost if you wish) operator and its second operand is always <em>N</em>
+whose value is read from input. The following function:
+
+</p><pre> 
+            2 x * 7 + N % 
+</pre> 
+
+is the RPN rendition of the more familiar infix <tt>(2*x+7)%N</tt>.  All input
+lines are shorter than 100 characters. The last line of input has
+<em>N</em> equal 0 and should not be processed.
+
+<p>
+For each line of input, output one line with one integer number, the period
+of <em>F</em> corresponding to the data given in the input line.
+
+
+</p><h3>Sample input</h3>
+<pre>10 1 x N %
+11 1 x x 1 + * N %
+1728 1 x x 1 + * x 2 + * N %
+1728 1 x x 1 + x 2 + * * N %
+100003 1 x x 123 + * x 12345 + * N %
+0 0 0 N %
+</pre>
+
+
+<h3>Output for sample input</h3>
+<pre>1
+3
+6
+6
+369
+</pre>
+
+<hr>
+<em>Piotr Rudnicki (from folklore, sometimes attributted to R. Floyd)</em>
+</body></html>

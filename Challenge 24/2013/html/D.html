@@ -1,0 +1,72 @@
+<html>
+<head><title>D. Octal CNC</title></head>
+<body>
+<div align="justify">
+
+<h2>D. Octal CNC</h2>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td align="justify">
+
+IGG uses CNC milling to manufacture some of the parts it makes. The CNC machine was bought
+as a bare bone construction, which means it came without an external communication port
+and can be programmed only via a small built-in touch screen. To cut the costs even more,
+IGG bought the cheapest firmware - the one that doesn't include an advanced user interface.
+Engineers program the CNC using octal digits drawn as strange glyphs on the display.
+<p>
+The engineers often write down their programs on paper, as that's
+the only way backing up their data. A lot of
+valuable CNC programs are stored this way. This is clearly not compliant with
+the policy the quality assurance auditors will mandate. The only solution is
+to finally convert the programs into conventional numbers, stored in text files.
+Unfortunately, due to the amount of data and the short deadline, this is not feasible
+to do by hand.
+<p>The engineers used their off-work hours to scan the papers - everything is now
+available in high resolution gray scale bitmaps. The only missing step is to process
+the images and convert the symbols into numbers.
+<td> &nbsp;&nbsp; <td align="right">
+<img width="150" alt="canonical form of the digits" src="oor.png">
+<br><font size="-3">canonical form of the digits</font>
+</table>
+<p>
+There are 8 digits, from 0 to 7. The canonical printed forms are as given
+above - hand written symbols may be less perfectly shaped. Each digit
+consists of 3 circles and 2 lines.
+
+
+<h3>Input</h3>
+A grayscale png with multiple "handwritten" lines of octal digits (black
+ink on white paper that may have texture) with the following properties:
+<UL>
+	<LI> maximum size of a page is 16384*16384 pixels;
+	<LI> digits may be scaled, aspect may change;
+	<LI> digits may be rotated randomly, within +-15 degrees;
+	<LI> spacing between characters are not even, but lines or cirles of different characters never cross or touch;
+	<LI> lines of text are not always straight;
+	<LI> each line ends with a checksum digit.
+</UL>
+
+The checksum digit is the sum of digits in the line (without the checksum digit)
+modulo 8.
+
+
+<h3>Output</h3>
+Outpout is a stream of digits from '0' to '7' in ASCII text, checksum included.
+The output shall cosist exactly as many digits as many gylphs are on the input
+png. The evaluator will ignore empty lines and white space.
+
+<h3>Example input</h3>
+A small "hello world" example is provided as <tt>example.png</tt> among with the input
+files. File <tt>reference_digits.png</tt> contains a list of digits from 0 to 7,
+without checksum, written in a relatively clean form (actual input images may
+have more distortion).
+
+<h3>Example output</h3>
+Output of the "hello world" example:
+<pre>
+0421501451541541570425
+0421671571621541440423
+</pre>
+
+</div>
+</body>
+</html>

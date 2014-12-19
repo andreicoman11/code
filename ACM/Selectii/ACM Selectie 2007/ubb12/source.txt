@@ -1,0 +1,7 @@
+A - GraphLabel SRM256
+B - Cubism SRM172
+C - ContestSchedule SRM320
+D - SumOfSquareRoots SRM212
+E - MusicCompilation SRM251
+F - Highscore  SRM229
+Reserve - StringOfPowers TCO04 Finals

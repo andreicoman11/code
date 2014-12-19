@@ -1,0 +1,61 @@
+<img align=right src=laser.jpg><h2>Problem A:  War on Weather</h2>
+After an unprovoked hurricane attack on the south shore,
+Glorious Warrior has declared war on weather.  The first
+salvo in this campaign will be a coordinated pre-emptive
+attack on as many tropical depressions as possible.  GW
+reckons that the attack will neutralize the tropical
+depressions before they become storms, and dissuade 
+others from forming.
+<p>
+GW has at his disposal <i>k</i> space-to-earth killer
+satellites at various locations in space.  <i>m</i> 
+tropical depressions are known to exist at various
+locations on the earth's surface.  Each satellite
+can attack any number of targets on the earth provided there
+is <i>line of sight</i> between the satellite and
+each target.  How many different targets can be hit?
+<p>
+The input consists of several test cases.  Each case
+begins with a line containing integers
+<i>0 &lt; k, m &le 100</i> as defined above.  <i>k</i>
+lines follow, each giving <i>x,y,z</i> - the location in space
+of a satellite at the scheduled time of attack.  <i>m</i> lines then follow, 
+each giving
+<i>x,y,z</i> - the location of a target tropical depression.
+Assume the earth is a sphere centred at (0,0,0) with
+circumference 40,000 km.  All targets will be on
+the surface of the earth (within 10<sup>-9</sup> km) and all
+satellites will be at least 50 km above the surface.
+A line containing 0 0 follows the last test case.
+<p>
+For each test case, output a line giving the total
+number of targets that can be hit.  If a particular
+target falls within 10<sup>-8</sup> km of the boundary
+between being within line-of-sight and not, it may
+be counted either way.  (That is, you need not consider 
+rounding error so long as it does not exceed 10<sup>-8</sup> km.)
+<h3>Sample Input</h3>
+<pre>
+3 2
+-10.82404031 -1594.10929753 -6239.77925152
+692.58497298 -5291.64700245 4116.92402298
+3006.49210582 2844.61925179 5274.03201053
+2151.03635167 2255.29684503 5551.13972186
+-1000.08700886 -4770.25497971 4095.48127333
+3 4
+0 0 6466.197723676
+0 6466.197723676 0
+6466.197723676 0 0
+6366.197723676 0 0
+6365.197723676 112.833485488 0
+0 0 6366.197723676
+0 -6366.197723676 0
+0 0
+</pre>
+<h3>Output for Sample Input</h3>
+<pre>
+2
+3
+</pre>
+<hr>
+<i>Gordon V. Cormack</i>

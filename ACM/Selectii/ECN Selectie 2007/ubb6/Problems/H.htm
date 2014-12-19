@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Problem H: Homogeneous squares</title>
+</head>
+<body>
+<center> 2006/2007 ACM International Collegiate Programming Contest <br>
+University of Ulm Local Contest
+<p> </p>
+<h1>Problem H: Homogeneous squares</h1>
+<p> Source file: homogeneous.(c|cc|hs|java|pas) <br>
+Input file: homogeneous.in </p>
+</center>
+<p>
+Assume you have a square of size <i>n</i> that is divided into <i>n&times;n</i>
+positions just as a checkerboard.
+Two positions <i>(x<sub>1</sub>,y<sub>1</sub>)</i> and <i>(x<sub>2</sub>,y<sub>2</sub>)</i>,
+where <i>1 &#8804; x<sub>1</sub>,y<sub>1</sub>,x<sub>2</sub>,y<sub>2</sub> &#8804;
+n</i>, are called "independent" if they occupy different rows and
+different columns, that is, <i>x<sub>1</sub>&#8800;x<sub>2</sub></i> and <i>y<sub>1</sub>&#8800;y<sub>2</sub></i>.
+More generally, <i>n</i> positions are called independent if they are
+pairwise independent.
+It follows that there are <i>n!</i> different ways to choose <i>n</i>
+independent positions.
+</p>
+<p>
+Assume further that a number is written in each position of such an <i>n&times;n</i>
+square.
+This square is called "homogeneous" if the sum of the numbers written in
+<i>n</i> independent positions is the same, no matter how the positions
+are chosen.
+Write a program to determine if a given square is homogeneous!
+</p>
+<p><b>Input Specification</b></p>
+<p>
+The input contains several test cases.
+<br>
+The first line of each test case contains an integer <i>n</i> (<i>1 &#8804;
+n &#8804; 1000</i>).
+Each of the next <i>n</i> lines contains <i>n</i> numbers, separated
+by exactly one space character.
+Each number is an integer from the interval <i>[-1000000,1000000]</i>.
+<br>
+The last test case is followed by a zero.
+</p>
+<h4>Output Specification</h4>
+<p>
+For each test case output whether the specified square is homogeneous or
+not.
+Adhere to the format shown in the sample output.
+</p>
+<h4>Sample Input</h4>
+<pre>2
+1 2
+3 4
+3
+1 3 4
+8 6 -2
+-3 4 0
+0
+</pre>
+<h4>Sample Output</h4>
+<pre>homogeneous
+not homogeneous
+</pre>
+</body>
+</html>

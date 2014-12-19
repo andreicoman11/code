@@ -1,0 +1,73 @@
+<html>
+<head><title>F. Backup communication</title></head>
+<body>
+<div align="justify">
+
+<h2>F. Backup communication</h2>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td align="justify">
+
+At each site, IGG has many buildings, with modern means of communication
+connecting them. Unfortunately these communication lines all depend on electricity.
+In case of a blackout, transmitting management orders becomes
+impossible using those channels. Off the shelf backup communication systems
+are extremely expensive, and the CEO has realized IGG is already
+manufacturing all the important components of an alternative solution: cannons,
+gunpowder, titanium capsules, paper and pen. The idea is to place a single
+cannon near the HQ and fire orders in the direction of each building.
+In case of emergency, the typical usage is to send the same message to all
+buildings with the smallest amount of effort.
+<td> &nbsp;&nbsp; <td align="right">
+<img width=300 alt="Parrot gun" src="parrottgun_small.jpg">
+<br><font size="-3">http://commons.wikimedia.org/wiki/File:Parrottgun.jpg</font>
+</table>
+<p>
+Your task is to determine the optimal placement of the cannon (on each of the
+10 sites of the company) to minimize the energy required to broadcast orders.
+<p>
+The energy required for a single shot is quadratic in the
+launch velocity <i>v</i> of the capsule, ie.
+<pre>
+  E = const * v * v
+</pre>
+<p>
+The elevation and direction of the cannon barrel can be
+easily set as well as <i>v</i>.
+The broadcast cost is the sum of the energies of all
+shots with optimal cannon settings.
+<p>
+Careful measurements show that the aerodynamic drag can
+be discarded and the maximum range of the cannon is
+larger than the distance between any two buildings.
+
+<h3>Input</h3>
+
+First line contains N the number of targets, the next N lines
+contain X,Y coordinates of the target buildings in km.
+
+<h3>Output</h3>
+
+The X,Y coordinates of the cannon, it must be within 0.1 m of the optimal placement.
+
+<table border="0" width="100%" cellpadding=0 cellspacing=0>
+<tr>
+<td valign=top><h3>Example input</h3>
+<pre>
+5
+-3.7 0.5
+1.2 7.7
+4.8 -7.7
+-2.3 -0.9
+5.2 3.4
+</pre>
+
+<td valign=top><h3>Example output</h3>
+<pre>
+-0.912975 0.321035
+</pre>
+</table>
+
+</div>
+</body>
+</html>
+

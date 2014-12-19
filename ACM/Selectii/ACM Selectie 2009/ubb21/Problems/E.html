@@ -1,0 +1,41 @@
+<img align=right src=pre.gif><h2>Problem E:  Prerequisites?</h2>
+Freddie the frosh has chosen to take <i>k</i> courses.
+To meet the degree requirements, he must take
+courses from each of several categories.  Can you assure
+Freddie that he will graduate, based on his course selection?
+<p>
+Input consists of several test cases.  For each case,
+the first line of input contains <i>1 &le; k &le; 100</i>,
+the number of courses Freddie has chosen, and <i>0 &le; m &le; 100</i>,
+the number of categories.  One or more lines follow containing <i>k</i> 4-digit integers follow; each is the number
+of a course selected by Freddie.  Each category is represented by
+a line containing <i>1 &le; c &le; 100</i>, the number of courses in the
+category, <i>0 &le; r &le; c</i>, the minimum number of courses
+from the category that must be taken, and the <i>c</i> course numbers in the category.
+Each course number is a 4-digit integer.  The same course may fulfil
+several category requirements.  Freddie's selections, and the
+course numbers in any particular category, are distinct.  A line
+containing 0 follows the last test case.
+<p>
+For each test case, output a line containing "yes" if Freddie's
+course selection meets the degree requirements; otherwise output "no."
+<h3>
+Sample Input</h3>
+<pre>
+3 2
+0123 9876 2222
+2 1 8888 2222
+3 2 9876 2222 7654 
+3 2
+0123 9876 2222
+2 2 8888 2222
+3 2 7654 9876 2222
+0
+</pre>
+<h3>Output for Sample Input</h3>
+<pre>
+yes
+no
+</pre>
+<hr>
+<i>Gordon V. Cormack</i>
